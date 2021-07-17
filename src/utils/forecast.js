@@ -9,7 +9,7 @@ const foreCast = (latitude , longitude , callback) => {
         }else if(response.body.error){
             callback("Unable to find location. Try again" , undefined) 
         }else{
-            callback(undefined,`${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degrees out. There is ${response.body.current.precip}% chance of rain.`
+            callback(undefined,`${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degrees out and feels like ${response.body.current.feelslike}. There is ${response.body.current.precip}% chance of rain.`
             //undefined in the place of errors since we know that we will get a response this time       
         )
       }
