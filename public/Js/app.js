@@ -33,7 +33,7 @@ form.addEventListener('submit', (event) => {
    const location = search.value // to extract input value and store in variable;
    msg1.textContent='Loading...'; // to set text content of the htm element
    msg2.textContent='';
-   fetch('http://localhost:3000/weather?address='+location).then((response) => {
+   fetch('/weather?address='+location).then((response) => {
     response.json().then((data) => {
        if(data.error){
            console.log(data.error);
